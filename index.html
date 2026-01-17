@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main class="container">
         <div class="card">
-            <h1 class="title">Random Password Generator</h1>
+            <h1 class="title">Password Generator</h1>
+            <p class="subtitle">Generate secure, random passwords instantly</p>
             
             <div class="password-wrapper">
                 <input 
@@ -17,6 +21,7 @@
                     id="password" 
                     class="password-field" 
                     readonly 
+                    placeholder="Click generate..."
                     aria-label="Generated password"
                 >
                 <button 
@@ -24,6 +29,7 @@
                     id="copy-btn" 
                     class="copy-btn" 
                     aria-label="Copy password to clipboard"
+                    title="Copy to clipboard"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
@@ -33,8 +39,16 @@
             </div>
             
             <button type="button" id="generate-btn" class="generate-btn">
-                Generate
+                Generate Password
             </button>
+            
+            <div class="strength-bar">
+                <div class="strength-fill"></div>
+            </div>
+            <div class="strength-text">
+                <span>Password Strength</span>
+                <span id="strength-label">Strong</span>
+            </div>
         </div>
     </main>
     
