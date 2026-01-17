@@ -38,16 +38,38 @@
                 </button>
             </div>
             
+            <div class="length-control">
+                <div class="length-header">
+                    <label for="length-slider">Password Length</label>
+                    <span class="length-value" id="length-value">12</span>
+                </div>
+                <input 
+                    type="range" 
+                    id="length-slider" 
+                    class="length-slider"
+                    min="4" 
+                    max="32" 
+                    value="12"
+                    aria-label="Password length"
+                >
+                <div class="length-labels">
+                    <span>4</span>
+                    <span>32</span>
+                </div>
+            </div>
+            
             <button type="button" id="generate-btn" class="generate-btn">
                 Generate Password
             </button>
             
-            <div class="strength-bar">
-                <div class="strength-fill"></div>
-            </div>
-            <div class="strength-text">
-                <span>Password Strength</span>
-                <span id="strength-label">Strong</span>
+            <div class="strength-section">
+                <div class="strength-header">
+                    <span>Password Strength</span>
+                    <span class="strength-label" id="strength-label">Strong</span>
+                </div>
+                <div class="strength-bar">
+                    <div class="strength-fill" id="strength-fill"></div>
+                </div>
             </div>
         </div>
     </main>

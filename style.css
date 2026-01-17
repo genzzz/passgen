@@ -212,29 +212,170 @@ body::after {
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
 }
 
-/* Password strength indicator */
-.strength-bar {
-    height: 4px;
+/* Length control */
+.length-control {
+    margin-bottom: 1.5rem;
+}
+
+.length-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.length-header label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.length-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #667eea;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.length-slider {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
     background: #e9ecef;
-    border-radius: 2px;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.length-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.length-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.5);
+}
+
+.length-slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.length-slider::-moz-range-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.5);
+}
+
+.length-slider::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(to right, #667eea var(--slider-progress, 29%), #e9ecef var(--slider-progress, 29%));
+}
+
+.length-slider::-moz-range-track {
+    height: 8px;
+    border-radius: 4px;
+    background: #e9ecef;
+}
+
+.length-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* Password strength indicator */
+.strength-section {
     margin-top: 1.5rem;
+}
+
+.strength-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.strength-header span:first-child {
+    color: var(--text-secondary);
+}
+
+.strength-label {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.strength-label.weak {
+    color: #ef4444;
+}
+
+.strength-label.fair {
+    color: #f59e0b;
+}
+
+.strength-label.good {
+    color: #3b82f6;
+}
+
+.strength-label.strong {
+    color: #10b981;
+}
+
+.strength-bar {
+    height: 6px;
+    background: #e9ecef;
+    border-radius: 3px;
     overflow: hidden;
 }
 
 .strength-fill {
     height: 100%;
-    background: linear-gradient(90deg, #10b981, #059669);
-    border-radius: 2px;
-    width: 100%;
-    transition: width 0.3s ease;
+    border-radius: 3px;
+    width: 0%;
+    transition: width 0.4s ease, background 0.4s ease;
 }
 
-.strength-text {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.5rem;
-    font-size: 0.8rem;
-    color: var(--text-secondary);
+.strength-fill.weak {
+    width: 25%;
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+.strength-fill.fair {
+    width: 50%;
+    background: linear-gradient(90deg, #f59e0b, #d97706);
+}
+
+.strength-fill.good {
+    width: 75%;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+}
+
+.strength-fill.strong {
+    width: 100%;
+    background: linear-gradient(90deg, #10b981, #059669);
 }
 
 /* Responsive */
