@@ -2,6 +2,8 @@
 
 A simple, secure random password generator built with vanilla HTML, CSS, and JavaScript featuring a modern glassmorphism UI.
 
+🔗 **Live Demo:** [https://genzzz.github.io/passgen/](https://genzzz.github.io/passgen/)
+
 ## Features
 
 - 🔐 Cryptographically secure password generation
