@@ -5,6 +5,10 @@ export default defineConfig({
   // Base path for GitHub Pages deployment
   // Change 'passgen' to your repository name
   base: '/passgen/',
+  server: {
+    port: 3000,
+    strictPort: true,
+  },
   plugins: [
     VitePWA({
       includeAssets: ['favicon.ico', 'apple-touch-icon-180x180.png', 'maskable-icon-512x512.png'],
