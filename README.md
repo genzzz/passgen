@@ -1,18 +1,25 @@
 # Random Password Generator
 
-A simple, secure random password generator built with vanilla HTML, CSS, and JavaScript featuring a modern glassmorphism UI.
+A secure random password generator built with **TypeScript**, **Vite**, and modern CSS featuring a glassmorphism UI.
 
 🔗 **Live Demo:** [https://genzzz.github.io/passgen/](https://genzzz.github.io/passgen/)
 
 ## Features
 
 - 🔐 Cryptographically secure password generation
-- � Adjustable password length (4-32 characters)
+- 📏 Adjustable password length (4-32 characters)
 - 📊 Real-time password strength indicator
 - 📋 One-click copy to clipboard with visual feedback
 - 🎨 Modern glassmorphism UI with animations
 - 📱 Fully responsive design
-- 🌐 Uses Google Fonts (Inter) for modern typography
+- ⚡ Fast development with Vite + TypeScript
+
+## Tech Stack
+
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Next-generation frontend tooling
+- **CSS3** - Modern styling with animations
+- **Google Fonts** - Inter typeface
 
 ## Security
 
@@ -31,27 +38,56 @@ A simple, secure random password generator built with vanilla HTML, CSS, and Jav
 - Smooth hover and click animations
 - Checkmark feedback on copy
 
-## Usage
+## Getting Started
 
-1. Open `index.html` in a browser
-2. Adjust the **length slider** (4-32 characters)
-3. Click "Generate Password" for a new password
-4. View the **strength indicator** below the button
-5. Click the copy icon to copy to clipboard (shows ✓ when copied)
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/genzzz/passgen.git
+cd passgen
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist/` folder.
 
 ## File Structure
 
 ```
 /rpg
-├── index.html    # Main HTML structure
-├── style.css     # Modern styling with animations
-├── script.js     # Password generation logic
-└── README.md     # Documentation
+├── index.html        # Entry HTML file
+├── src/
+│   ├── main.ts       # TypeScript application code
+│   └── style.css     # Modern styling with animations
+├── tsconfig.json     # TypeScript configuration
+├── vite.config.ts    # Vite configuration (if present)
+├── package.json      # Dependencies and scripts
+└── README.md         # Documentation
 ```
 
-## Dependencies
+## Scripts
 
-- [Google Fonts - Inter](https://fonts.google.com/specimen/Inter) (loaded via CDN)
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
 
 ## Browser Support
 

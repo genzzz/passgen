@@ -1,79 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Password Generator</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <main class="container">
-        <div class="card">
-            <h1 class="title">Password Generator</h1>
-            <p class="subtitle">Generate secure, random passwords instantly</p>
-            
-            <div class="password-wrapper">
-                <input 
-                    type="text" 
-                    id="password" 
-                    class="password-field" 
-                    readonly 
-                    placeholder="Click generate..."
-                    aria-label="Generated password"
-                >
-                <button 
-                    type="button" 
-                    id="copy-btn" 
-                    class="copy-btn" 
-                    aria-label="Copy password to clipboard"
-                    title="Copy to clipboard"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                </button>
-            </div>
-            
-            <div class="length-control">
-                <div class="length-header">
-                    <label for="length-slider">Password Length</label>
-                    <span class="length-value" id="length-value">12</span>
-                </div>
-                <input 
-                    type="range" 
-                    id="length-slider" 
-                    class="length-slider"
-                    min="4" 
-                    max="32" 
-                    value="12"
-                    aria-label="Password length"
-                >
-                <div class="length-labels">
-                    <span>4</span>
-                    <span>32</span>
-                </div>
-            </div>
-            
-            <button type="button" id="generate-btn" class="generate-btn">
-                Generate Password
-            </button>
-            
-            <div class="strength-section">
-                <div class="strength-header">
-                    <span>Password Strength</span>
-                    <span class="strength-label" id="strength-label">Strong</span>
-                </div>
-                <div class="strength-bar">
-                    <div class="strength-fill" id="strength-fill"></div>
-                </div>
-            </div>
+      <div class="card">
+        <h1 class="title">Password Generator</h1>
+        <p class="subtitle">Generate secure, random passwords instantly</p>
+
+        <div class="password-wrapper">
+          <input
+            type="text"
+            id="password"
+            class="password-field"
+            readonly
+            placeholder="Click generate..."
+            aria-label="Generated password"
+          />
+          <button
+            type="button"
+            id="copy-btn"
+            class="copy-btn"
+            aria-label="Copy password to clipboard"
+            title="Copy to clipboard"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path
+                d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+              ></path>
+            </svg>
+          </button>
         </div>
+
+        <div class="length-control">
+          <div class="length-header">
+            <label for="length-slider">Password Length</label>
+            <span class="length-value" id="length-value">12</span>
+          </div>
+          <input
+            type="range"
+            id="length-slider"
+            class="length-slider"
+            min="4"
+            max="32"
+            value="12"
+            aria-label="Password length"
+          />
+          <div class="length-labels">
+            <span>4</span>
+            <span>32</span>
+          </div>
+        </div>
+
+        <button type="button" id="generate-btn" class="generate-btn">
+          Generate Password
+        </button>
+
+        <div class="strength-section">
+          <div class="strength-header">
+            <span>Password Strength</span>
+            <span class="strength-label" id="strength-label">Strong</span>
+          </div>
+          <div class="strength-bar">
+            <div class="strength-fill" id="strength-fill"></div>
+          </div>
+        </div>
+      </div>
     </main>
-    
-    <script src="script.js"></script>
-</body>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
